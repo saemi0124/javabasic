@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class Listing2.16{
+	public static void main(String[] arg){
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the number of years: ");
+		int years = input.nextInt();
+		int population = 312032486 + ((((31536000) / 7) - (31536000 / 13) + (31536000 / 45)) * years);
+		System.out.println("The population in 5 years is " + population);
+	}
+}
