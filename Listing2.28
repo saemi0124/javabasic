@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Listing2.28{
+	public static void main(String[] arg){
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter an amount as integer, for example 1156 for 11.56: ");
+		int amount = input.nextInt();
+		int remaining = amount;
+		
+		int numberOfDollar = remaining / 100;
+		remaining %= 100;
+		
+		int numberOfQuarter = remaining / 25;
+		remaining %= 25;
+		
+		int numberOfDime = remaining / 10;
+		remaining %= 10;
+		
+		int numberOfNickel = remaining / 5;
+		remaining %= 5;
+		
+		int numberOfPenny = remaining  / 1;
+		
+		System.out.println("Your amount" + amount / 100.0 + "consists of");
+		System.out.println(" " + numberOfDollar + " dollars "+ numberOfQuarter + " quarters " + numberOfDime + " dimes " + numberOfNickel + " nickels " + numberOfPenny + " pennies");
+	}
+}
