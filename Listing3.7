@@ -3,30 +3,29 @@ import java.util.Scanner;
 public class Listing3.7{
 	public static void main (String[] args){
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter three integers: ");
-		int num1 = input.nextInt();
-		int num2 = input.nextInt();
-		int num3 = input.nextInt();
+		System.out.println("Enter an amount in double, for example 11.56: ");
+		double amount = input.nextDouble();
+		int remainingAmount = (int)(amount*100);
+		int numberOfDollars = remainingAmount / 100;
+		remainingAmount %= 100;
+		int numberOfQuarters = remainingAmount / 25;
+		remainingAmount %= 25;
+		int numberOfDimes = remainingAmount / 10;
+		remainingAmount %= 10;
+		int numberOfNickels = remainingAmount / 5;
+		remainingAmount %= 5;
+		int numberOfPennies = remainingAmount;
 	 
-		int temp;
-		if (num2 < num1 || num3 < num1) {
-			if (num2 < num1)
-			{
-				temp = num1;
-				num1 = num2;
-				num2 = temp;
-			}
-			if (num3 < num1) {
-				temp = num1;
-				num1 = num3;
-				num3 = temp;
-			}
-		}
-		if (num3 < num2) {
-			temp = num2;
-			num2 = num3;
-			num3 = temp;
-		}
-		System.out.println(num1 + " " + num2 + " " + num3);
+		System.out.println("Your amount " + amount + " consist of ");
+		System.out.println(" " + numberOfDollars + 
+			(numberOfDollars == 1 ? " dollar" : " dollars"));
+		System.out.println(" " + numberOfQuarters +
+			(numberOfQuarters == 1 ? " quarter" : " quarters"));
+		System.out.println(" " + numberOfDimes +
+			(numberOfDimes == 1 ? " dime" : " dimes"));
+		System.out.println(" " + numberOfNickels +
+			(numberOfNickels == 1 ? " nickel" : " nickels"));
+		System.out.println(" " + numberOfPennies +
+			(numberOfPennies == 1 ? " penny" : " pennies"));
 	}
 }
