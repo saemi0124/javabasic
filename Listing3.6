@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Listing3.6{
+ public static void main (String[] args){
+	 Scanner input = new Scanner(System.in);
+	 System.out.println("Enter weight in pounds: ");
+	 double weight = input.nextDouble();
+	 System.out.println("Enter feet: ");
+	 double feet = input.nextDouble();
+	 System.out.println("Enter inches: ");
+	 double inch = input.nextDouble();
+	 
+	 final double KILOGRAMS_PER_POUND = 0.45359237;
+	 final double METERS_PER_INCH = 0.0254;
+	 final double FEET_PER_INCH = 0.0833333;
+	 
+	 //compute BMI
+	 weight *= KILOGRAMS_PER_POUND;
+	 double height = (inch += feet / FEET_PER_INCH) * METERS_PER_INCH;
+	 double BMI = weight / Math.pow(height,2);
+	 System.out.println("BMI is " + BMI);
+	 if (BMI < 18.5) 
+		 System.out.println("Underweight");
+	 else if (BMI < 25)
+		 System.out.println("Normal");
+	 else if (BMI < 30)
+		 System.out.println("Overweight");
+	 else
+		 System.out.println("Obese");
+	}
+}
