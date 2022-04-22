@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class Listing3.14{
+	public static void main (String[] args){
+		Scanner input = new Scanner(System.in);
+		System.out.println("heads or tails : ");
+		int answer = input.nextInt();
+		int coin = (int)(Math.random() * 2);
+		System.out.println((answer == coin) ? "correct" : "incorrect");
+	}
+}
