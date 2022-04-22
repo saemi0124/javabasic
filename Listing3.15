@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Listing3.15{
+	public static void main (String[] args){
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter a three digit number: ");
+		int number = input.nextInt();
+		int dig1 = number /100;
+		int remaining = number % 100;
+		int dig2 = number / 10;
+		int dig3 = remaining % 10;
+		int lotteryNumber = (int)(Math.random() * 1000);
+		int lotteryDig1 = lotteryNumber / 100;
+		int remainingLot = lotteryNumber % 100;
+		int lotteryDig2 = remainingLot / 10;
+		int lotteryDig3 = remainingLot % 10;
+		
+		System.out.println("The lottery number is " + lotteryNumber);
+		if (number == lotteryNumber)
+			System.out.println("Exact match: you win $10,000");
+		else if ((dig1 == lotteryDig1 || dig1 == lotteryDig2 || dig1 == lotteryDig3) && (dig2 == lotteryDig1 || dig2 == lotteryDig2 || dig2 == lotteryDig3) && (dig3 == lotteryDig1 || dig3 == lotteryDig2 || dig3 == lotteryDig3))
+			System.out.println("$3,000");
+		else if  ((dig1 == lotteryDig1 || dig1 == lotteryDig2 || dig1 == lotteryDig3) || (dig2 == lotteryDig1 || dig2 == lotteryDig2 || dig2 == lotteryDig3) || (dig3 == lotteryDig1 || dig3 == lotteryDig2 || dig3 == lotteryDig3))
+			System.out.println("$1,000");
+		else
+			System.out.println("$0");
+	
+	}
+}
