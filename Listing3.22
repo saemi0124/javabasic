@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Listing3.22{
+	public static void main (String[] args){
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter a point with two coordinates: ");
+		double x = input.nextDouble();
+		double y = input.nextDouble();
+		
+		boolean circle = Math.pow(Math.pow(x, 2) + Math.pow(y, 2), 0.5) <= 10;
+		
+		System.out.print("Point (" + x + ", " + y + ") is " + ((circle) ? "in " : "not in ") + "the circle");
+	}
+}
