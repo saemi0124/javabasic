@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Listing3.30{
+	public static void main (String[] args){
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter the time zone offset to GMT: ");
+		int timeZone = input.nextInt();
+		long total = System.currentTimeMillis();
+		long totalSeconds = total / 1000;
+		long currentSeconds = totalSeconds % 60;
+		long totalMinutes = totalSeconds / 60;
+		long currentMinutes = totalMinutes % 60;
+		long totalHours = totalMinutes / 60;
+		long currentHour = totalHours % 24;
+		currentHour = currentHour + timeZone;
+		
+		System.out.println("current time is " + ((currentHour > 12) ? currentHour - 12 : currentHour) + ":" + currentMinutes + ":" + currentSeconds + ((currentHour >12) ? "pm" : "am"));
+	}
+}
