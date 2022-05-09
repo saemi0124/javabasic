@@ -7,7 +7,7 @@ public class Listing4.15{
 		String letter = input.nextLine();
 		char ch = letter.charAt(0);
 		ch = Character.toUpperCase(ch);
-		int number = 0;j
+		int number = 0;
 		if (Character.isLetter(ch)){
 			if(ch >= 'W')
 				number = 9;
