@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Listing4.14{
+	public static void main (String[] args){
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter a letter grade: ");
+		String grade = input.nextLine();
+		char ch = grade.charAt(0);
+		switch(Character.toUpperCase(ch)){
+			
+			case 'A': System.out.print("The numeric value for grade " + ch + " is 4");break;
+			case 'B': System.out.print("The numeric value for grade " + ch + " is 3");break;
+			case 'C': System.out.print("The numeric value for grade " + ch + " is 2");break;
+			case 'D': System.out.print("The numeric value for grade " + ch + " is 1");break;
+			case 'F': System.out.print("The numeric value for grade " + ch + " is 0");
+			default: System.out.print(ch + " is an invalid grade");
+			
+		}	
+	}
+}
