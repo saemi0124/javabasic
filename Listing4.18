@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class practice1{
+	public static void main (String[] args){
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter two characters: ");
+		String subject = input.nextLine();
+		char ch = Character.toUpperCase(subject.charAt(0));
+		char num = subject.charAt(1);
+		switch(ch){
+			case 'M': System.out.print("Mathematics "); break;
+			case 'C': System.out.print("Computer Science "); break;
+			case 'I': System.out.print("Information Technology ");
+			default: System.out.println("Invalid input");
+			System.exit(1);
+		}
+		switch(num){
+			case '1': System.out.print("freshman");break;
+			case '2': System.out.print("sophomore");break;
+			case '3': System.out.print("junior");break;
+			case '4': System.out.print("senior");
+			default: System.out.println("Invalid input");
+		}
+	}
+}
