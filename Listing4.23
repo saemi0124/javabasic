@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Listing4.23{
+	public static void main (String[] args){
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter employee's name: ");
+		String name = input.nextLine();
+		System.out.println("Enter number of hours worked in a week: ");
+		double hour = input.nextDouble();
+		System.out.println("Enter hourly pay rate: ");
+		double rate = input.nextDouble();
+		System.out.println("Enter federal tax withholding rate: ");
+		double federalRate = input.nextDouble();
+		System.out.println("Enter state tax withholding rate: ");
+		double stateRate = input.nextDouble();
+		double grossPay, federal, state, totalDeduction;
+		System.out.printf("Employ name: " + name + "\nHours Worked: " + hour + "\nPay Rate: $" + rate +
+					"\nGross Pay: $" + (grossPay = hour * rate) +
+					"\nDeductions:\n  Federal Withholding: $" + (federal = grossPay * federalRate) +
+					"\n  State Withholding: $" + (state = grossPay * stateRate) + "\n  Total Deduction: $" +
+					(totalDeduction = federal + state) + "\nNet Pay: $" + (grossPay - totalDeduction));
+	}
+}
